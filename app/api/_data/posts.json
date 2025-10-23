@@ -1,0 +1,22 @@
+[
+  {
+    "id": "p1",
+    "title": "How to get started in Bali",
+    "coverUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1400&auto=format&fit=crop",
+    "author": "Alice",
+    "createdAt": "2024-09-01T10:00:00.000Z",
+    "tags": ["bali", "guide"],
+    "excerpt": "Everything you need to know for your first week in Ubud.",
+    "content": "Detailed guide with maps and tips."
+  },
+  {
+    "id": "p2",
+    "title": "Lisbon coworking picks",
+    "author": "Bob",
+    "createdAt": "2024-09-10T12:00:00.000Z",
+    "tags": ["lisbon", "cowork"],
+    "excerpt": "Top places to work and meet founders.",
+    "coverUrl": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1400&auto=format&fit=crop"
+  }
+]
+

@@ -1,0 +1,10 @@
+{
+  "/api/bases/route": "app/api/bases/route.js",
+  "/api/nodes/route": "app/api/nodes/route.js",
+  "/api/community/route": "app/api/community/route.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/bases/page": "app/[locale]/bases/page.js",
+  "/[locale]/community/page": "app/[locale]/community/page.js",
+  "/[locale]/nodes/page": "app/[locale]/nodes/page.js",
+  "/[locale]/bases/[slug]/page": "app/[locale]/bases/[slug]/page.js"
+}

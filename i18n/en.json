@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "bases": "Bases",
+    "nodes": "Nodes",
+    "community": "Community",
+    "jobs": "Jobs",
+    "me": "Me"
+  },
+  "home": {
+    "hero_title": "Start Glomia life",
+    "hero_sub": "Explore bases, nodes and stories across the world",
+    "view_bases": "Explore Bases",
+    "featured_bases": "Featured Bases",
+    "featured_nodes": "Featured Nodes",
+    "community_stories": "Community Stories"
+  },
+  "actions": {
+    "connect_wallet": "Connect Wallet",
+    "disconnect": "Disconnect",
+    "switch_network": "Switch Network",
+    "learn_more": "Learn more",
+    "apply": "Apply",
+    "join": "Join",
+    "view_map": "View Map",
+    "post": "Post",
+    "create": "Create",
+    "save_draft": "Save Draft",
+    "submit": "Submit",
+    "submit_api": "Submit via API",
+    "not_implemented": "Not Implemented"
+  },
+  "filters": {
+    "budget": "Budget / month",
+    "internet": "Internet",
+    "visa": "Visa difficulty",
+    "climate": "Climate",
+    "community": "Community activity",
+    "type": "Type",
+    "seats": "Seats",
+    "open": "Open hours"
+  },
+  "tips": {
+    "not_ready": "This feature is not available yet.",
+    "need_wallet": "Please connect your wallet first.",
+    "insufficient_perm": "You don't meet the reputation requirement yet."
+  },
+  "forms": {
+    "title": "Title",
+    "intro": "Introduction",
+    "base": "Base",
+    "node": "Node",
+    "quota": "Quota",
+    "startAt": "Start at",
+    "endAt": "End at",
+    "price": "Price",
+    "poster": "Poster URL",
+    "step_basic": "Basic",
+    "step_time_place": "Time & Place",
+    "step_ticket": "Ticket",
+    "step_poster": "Poster"
+  }
+}

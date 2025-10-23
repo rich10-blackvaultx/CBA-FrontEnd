@@ -1,0 +1,49 @@
+[
+  {
+    "id": "base-bali",
+    "slug": "bali",
+    "name": "Bali Ubud",
+    "country": "Indonesia",
+    "coverUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop",
+    "monthlyCost": 1200,
+    "internetMbps": 200,
+    "visaLevel": 2,
+    "climate": "tropical",
+    "safety": 4.2,
+    "communityScore": 4.6,
+    "timeline": [
+      { "day": 1, "title": "Arrival", "desc": "Check-in and orientation." },
+      { "day": 2, "title": "Adapt", "desc": "Find your rhythm and workspace." },
+      { "day": 3, "title": "Connect", "desc": "Meet community members." },
+      { "day": 4, "title": "Co-create", "desc": "Hack and collaborate." },
+      { "day": 5, "title": "Grow", "desc": "Share outcomes and next steps." }
+    ],
+    "cost": { "housing": 700, "cowork": 200, "food": 250, "commute": 50, "currency": "USD" },
+    "storyIds": ["s1", "s2"],
+    "nodeIds": ["node-ubud-cafe", "node-ubud-cowork"]
+  },
+  {
+    "id": "base-lisbon",
+    "slug": "lisbon",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "coverUrl": "https://images.unsplash.com/photo-1536331259430-634b8ba0157b?q=80&w=1400&auto=format&fit=crop",
+    "monthlyCost": 2200,
+    "internetMbps": 500,
+    "visaLevel": 3,
+    "climate": "temperate",
+    "safety": 4.5,
+    "communityScore": 4.8,
+    "timeline": [
+      { "day": 1, "title": "Arrival", "desc": "Settle near the river." },
+      { "day": 2, "title": "Adapt", "desc": "Walk and ride trams." },
+      { "day": 3, "title": "Connect", "desc": "Meet makers at LX Factory." },
+      { "day": 4, "title": "Co-create", "desc": "Ship small, share often." },
+      { "day": 5, "title": "Grow", "desc": "Sunset review at Miradouro." }
+    ],
+    "cost": { "housing": 1300, "cowork": 300, "food": 500, "commute": 100, "currency": "EUR" },
+    "storyIds": ["s3"],
+    "nodeIds": ["node-lisbon-cowork-1", "node-lisbon-cafe-1"]
+  }
+]
+
