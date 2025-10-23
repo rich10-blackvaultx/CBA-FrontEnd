@@ -48,12 +48,72 @@ html.theme-animating::before {
 }
 @keyframes themeSweep { from { opacity: .8; } to { opacity: 0; } }
 
-/* Dark theme brand overrides */
-.dark .bg-brand {
-  background: linear-gradient(180deg, #4a4a4f 0%, #2b2b2f 100%) !important;
+/* Brand buttons: soft gradient in both themes */
+.bg-brand {
+  background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%) !important; /* blue-600 -> blue-700 */
   color: #fff !important;
   border: 1px solid rgba(255,255,255,0.08) !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 1px 10px rgba(0,0,0,0.25) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 1px 10px rgba(0,0,0,0.12) !important;
 }
-.dark .bg-brand:hover { filter: brightness(1.05); }
-.dark .text-brand { color: #c7d2fe !important; } /* indigo-200 */
+.bg-brand:hover { filter: brightness(1.04); }
+.text-brand { color: #2563eb !important; }
+.dark .text-brand { color: #93c5fd !important; } /* blue-300 in dark */
+
+/* Step chips */
+.step-chip { @apply px-2 py-0.5 rounded-full text-sm; }
+.step-chip-current { background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%); color: #fff; border: 0; }
+.dark .step-chip-current { background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%); color: #fff; border: 0; }
+.step-chip-done { color: #2563eb; }
+.dark .step-chip-done { color: #93c5fd; }
+.step-chip-todo { color: #6b7280; }
+
+/* Fancy primary/ghost buttons */
+.btn-primary {
+  background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  border-radius: 12px;
+  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+  box-shadow: 0 8px 24px rgba(37,99,235,.25);
+}
+.btn-primary:hover { transform: translateY(-1px); filter: brightness(1.05); box-shadow: 0 12px 28px rgba(37,99,235,.32); }
+.btn-primary:active { transform: translateY(0); filter: brightness(.98); }
+
+.btn-ghost {
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 12px;
+  background: rgba(255,255,255,.7);
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+.dark .btn-ghost { border-color: rgba(255,255,255,.08); background: rgba(17,24,39,.6); }
+.btn-ghost:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+
+/* Hover lift for cards */
+.hover-lift { transition: transform .2s ease, box-shadow .25s ease; }
+.hover-lift:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,.12); }
+
+/* Progress bar */
+.progress-track { height: 6px; border-radius: 9999px; background: linear-gradient(90deg, rgba(37,99,235,.12), rgba(29,78,216,.12)); overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #1d4ed8); border-radius: inherit; animation: progressShift 2.6s linear infinite; }
+@keyframes progressShift { 0% { filter: brightness(1); } 50% { filter: brightness(1.08); } 100% { filter: brightness(1); } }
+
+/* Step transitions */
+.animate-fade-up { animation: fadeUp .28s ease-out both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Upload dashed border pulse */
+.dash-pulse { animation: dashPulse 2.4s ease-in-out infinite; }
+@keyframes dashPulse { 0%,100% { border-color: rgba(99,102,241,.35); } 50% { border-color: rgba(59,130,246,.55); } }
+
+/* Pulsing icon */
+.icon-pulse { animation: iconPulse 1.6s ease-in-out infinite; }
+@keyframes iconPulse { 0%,100% { transform: scale(1); opacity: .8; } 50% { transform: scale(1.1); opacity: 1; } }
+
+/* Dropdown pop */
+.menu-pop { animation: menuPop .12s ease-out both; transform-origin: 100% 0; }
+@keyframes menuPop { from { opacity: 0; transform: translateY(6px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* Overrides: dark mode neutral buttons/steps */
+.dark .bg-brand { background: linear-gradient(180deg, #4b5563 0%, #374151 100%) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 1px 10px rgba(0,0,0,0.25) !important; }
+.dark .btn-primary { background: linear-gradient(180deg, #4b5563 0%, #374151 100%); box-shadow: 0 8px 24px rgba(55,65,81,.35); }
+.dark .btn-primary:hover { box-shadow: 0 12px 28px rgba(55,65,81,.45); }
+.dark .step-chip-current { background: linear-gradient(180deg, #4b5563 0%, #374151 100%); color: #fff; border: 0; }

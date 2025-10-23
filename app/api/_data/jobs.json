@@ -1,0 +1,22 @@
+[
+  {
+    "id": "job-1",
+    "title": "Landing page redesign",
+    "skills": ["React", "Tailwind", "Figma"],
+    "budget": { "min": 1000, "max": 2000, "currency": "USD" },
+    "payType": "fixed",
+    "timezone": "UTC+1",
+    "reputationRequired": 2,
+    "owner": { "name": "Alice" }
+  },
+  {
+    "id": "job-2",
+    "title": "Dashboard charts (Recharts)",
+    "skills": ["TypeScript", "Recharts"],
+    "budget": { "min": 30, "max": 60, "currency": "USD" },
+    "payType": "hourly",
+    "timezone": "UTC+8",
+    "owner": { "name": "Bob" }
+  }
+]
+

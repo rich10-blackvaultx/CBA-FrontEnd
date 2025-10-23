@@ -1,17 +1,35 @@
+export type Currency = 'USD' | 'EUR' | 'CNY'
+
+export interface Ticket {
+  type: 'free' | 'paid'
+  price?: number
+  currency?: Currency
+  quota: number
+  waitlist?: boolean
+}
+
 export interface ActivityInput {
   title: string
-  intro: string
-  nodeId: string
-  baseId?: string
-  quota: number
+  tagline?: string
+  desc?: string
+  baseId: string
+  nodeId?: string
+  poster?: string
   startAt: string
   endAt: string
-  price?: number
-  poster?: string
+  timezone: string
+  host?: string
+  hostAvatar?: string
+  identityTags?: string[]
+  ticket: Ticket
+  tags?: string[]
+  locationNote?: string
 }
 
 export interface Activity extends ActivityInput {
   id: string
-  creator: string
+  status: 'pending' | 'published' | 'cancelled'
+  creatorAddress: string
+  createdAt: string
+  signups: { address: string; status: 'confirmed' | 'waitlist' | 'checked-in' }[]
 }
-

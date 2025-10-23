@@ -21,10 +21,16 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  let messages
+  let messages: any
   try {
     // Use relative dynamic import to avoid alias resolution issues
-    messages = (await import(`../../i18n/${locale}.json`)).default
+    const core = (await import(`../../i18n/${locale}.json`)).default
+    // Optionally merge extension messages if exists
+    let ext: any = {}
+    try {
+      ext = (await import(`../../i18n/ext.${locale}.json`)).default
+    } catch {}
+    messages = { ...core, ...ext }
   } catch (error) {
     notFound()
   }

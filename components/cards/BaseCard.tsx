@@ -54,11 +54,11 @@ export function BaseCard({
           Budget ${base.monthlyCost}/m • Net {base.internetMbps} Mbps
         </p>
 
-        <div className="mt-4">
+        {/* <div className="mt-4">
           <span className="inline-block rounded-full bg-brand px-5 py-2 text-sm text-white shadow-soft">
             {ctaLabel}
           </span>
-        </div>
+        </div> */}
       </div>
     </Link>
   )

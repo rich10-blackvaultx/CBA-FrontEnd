@@ -5,18 +5,23 @@
     "coverUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1400&auto=format&fit=crop",
     "author": "Alice",
     "createdAt": "2024-09-01T10:00:00.000Z",
+    "updatedAt": "2024-10-01",
+    "avatar": "/images/avatar.png",
     "tags": ["bali", "guide"],
     "excerpt": "Everything you need to know for your first week in Ubud.",
-    "content": "Detailed guide with maps and tips."
+    "content": "Detailed guide with maps and tips.",
+    "rating": 5
   },
   {
     "id": "p2",
     "title": "Lisbon coworking picks",
     "author": "Bob",
     "createdAt": "2024-09-10T12:00:00.000Z",
+    "updatedAt": "2024-10-03",
+    "avatar": "/images/avatar.png",
     "tags": ["lisbon", "cowork"],
     "excerpt": "Top places to work and meet founders.",
-    "coverUrl": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1400&auto=format&fit=crop"
+    "coverUrl": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1400&auto=format&fit=crop",
+    "rating": 4
   }
 ]
-

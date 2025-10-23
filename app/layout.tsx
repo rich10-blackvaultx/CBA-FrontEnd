@@ -1,5 +1,7 @@
 import '@/styles/globals.css'
 import '@/styles/theme.css'
+// MapLibre CSS for interactive maps
+import 'maplibre-gl/dist/maplibre-gl.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

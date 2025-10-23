@@ -13,20 +13,20 @@ export function BaseActions({ baseId, baseName }: { baseId: string; baseName: st
   async function handleSignup() {
     if (!isConnected) {
       openConnectModal?.()
+      alert(t('connect_wallet'))
       return
     }
     try {
+      const topic = prompt('Topic/subject') || `Join ${baseName}`
       await createActivity({
-        title: `Join ${baseName}`,
-        intro: 'Mock signup from base detail page',
-        nodeId: '',
+        title: topic,
         baseId,
-        quota: 1,
-        startAt: new Date().toISOString(),
-        endAt: new Date(Date.now() + 60 * 60 * 1000).toISOString(),
-        price: 0,
-        poster: ''
-      })
+        startAt: new Date().toISOString().slice(0,16),
+        endAt: new Date(Date.now() + 60 * 60 * 1000).toISOString().slice(0,16),
+        timezone: '+00:00',
+        ticket: { type: 'free', quota: 1 },
+        creatorAddress: address!
+      } as any)
       alert('Signed up (mock). You can check /api/activities')
     } catch (e) {
       console.error(e)
@@ -56,4 +56,3 @@ export function BaseActions({ baseId, baseName }: { baseId: string; baseName: st
     </div>
   )
 }
-

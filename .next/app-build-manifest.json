@@ -32,6 +32,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/community/route.js"
     ],
+    "/[locale]/bases/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/bases/[slug]/page.js"
+    ],
+    "/[locale]/create/activity/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/create/activity/page.js"
+    ],
     "/[locale]/bases/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -41,6 +51,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/nodes/page.js"
+    ],
+    "/[locale]/nodes/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/nodes/[id]/page.js"
     ],
     "/[locale]/community/page": [
       "static/chunks/webpack.js",
@@ -52,20 +67,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/community/post/[id]/page.js"
     ],
-    "/[locale]/nodes/[id]/page": [
+    "/[locale]/jobs/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/nodes/[id]/page.js"
+      "static/chunks/app/[locale]/jobs/page.js"
     ],
-    "/[locale]/me/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/me/page.js"
-    ],
-    "/[locale]/bases/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/bases/[slug]/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

@@ -32,9 +32,13 @@ export function NavbarIntl() {
           <NavLink href={`${base}/bases`}>{t('nav.bases')}</NavLink>
           <NavLink href={`${base}/nodes`}>{t('nav.nodes')}</NavLink>
           <NavLink href={`${base}/community`}>{t('nav.community')}</NavLink>
-          <button onClick={() => openNI('Jobs')} className="px-3 py-2 text-gray-700">
-            {t('nav.jobs')}
-          </button>
+          <NavLink href={`${base}/jobs`}>{t('nav.jobs')}</NavLink>
+          <div className="relative group">
+            <button className="px-3 py-2 text-gray-700 dark:text-gray-300">Create ▾</button>
+            <div className="absolute right-0 mt-1 hidden group-hover:block card p-2 min-w-40 menu-pop">
+              <Link href={`${base}/create/activity`} className="block px-3 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">Activity</Link>
+            </div>
+          </div>
           <NavLink href={`${base}/me`}>{t('nav.me')}</NavLink>
         </nav>
         <div className="flex items-center gap-2">

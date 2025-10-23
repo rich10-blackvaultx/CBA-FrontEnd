@@ -30,6 +30,33 @@ export function FilterBar({
 
   return (
     <div className="card p-4 grid grid-cols-2 md:grid-cols-6 gap-3">
+      {/* Quick chips */}
+      <div className="col-span-2 md:col-span-6 -mt-1 mb-1 flex flex-wrap gap-2 text-xs">
+        <button
+          className="px-2 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-gray-800"
+          onClick={() => {
+            update({ budget: 1500 });
+          }}
+        >
+          Budget {'<'} 1500
+        </button>
+        <button
+          className="px-2 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-gray-800"
+          onClick={() => {
+            update({ internet: 200 });
+          }}
+        >
+          Net ≥ 200
+        </button>
+        <button
+          className="px-2 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-gray-800"
+          onClick={() => {
+            update({ visa: 1 as any });
+          }}
+        >
+          Visa-easy
+        </button>
+      </div>
       <label className="text-sm">
         <span className="block mb-1">{t('budget')}</span>
         <input

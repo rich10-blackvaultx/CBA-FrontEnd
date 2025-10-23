@@ -16,7 +16,12 @@ export default async function PostDetail({ params }: { params: Promise<{ locale:
     <div className="container-responsive py-6">
       <article className="prose max-w-none">
         <h1>{post.title}</h1>
-        <p className="text-sm text-gray-500">{post.author} • {formatDateTime(post.createdAt)}</p>
+        <p className="text-sm text-gray-500 flex items-center gap-2">
+          {post.avatar && <img src={post.avatar} alt={post.author} className="w-6 h-6 rounded-full" />}
+          <span>{post.author}</span>
+          <span>· {formatDateTime(post.updatedAt || post.createdAt)}</span>
+          {post.rating && <span>· ⭐ {post.rating}</span>}
+        </p>
         {post.coverUrl && <img src={post.coverUrl} alt="cover" className="rounded-xl my-4" />}
         <p>{post.content || post.excerpt}</p>
       </article>
@@ -27,3 +32,4 @@ export default async function PostDetail({ params }: { params: Promise<{ locale:
     </div>
   )
 }
+

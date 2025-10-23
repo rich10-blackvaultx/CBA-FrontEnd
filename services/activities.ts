@@ -5,7 +5,6 @@ export async function fetchActivities(): Promise<Activity[]> {
   return getJSON('/api/activities')
 }
 
-export async function createActivity(input: ActivityInput & { creator?: string }) {
-  return postJSON<{ ok: boolean; id: string }>(`/api/activities`, input)
+export async function createActivity(input: ActivityInput & { creatorAddress: string }) {
+  return postJSON<Activity>(`/api/activities`, input)
 }
-

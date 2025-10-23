@@ -1,4 +1,10 @@
 {
+  "components\\shared\\Map.tsx -> maplibre-gl": {
+    "id": "components\\shared\\Map.tsx -> maplibre-gl",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_pnpm_maplibre-gl_4_7_1_node_modules_maplibre-gl_dist_maplibre-gl_js.js"
+    ]
+  },
   "node_modules\\.pnpm\\@rainbow-me+rainbowkit@2.2._bf6eb56b03700583486c3974126056df\\node_modules\\@rainbow-me\\rainbowkit\\dist\\index.js -> ./Arc-VDBY7LNS.js": {
     "id": "node_modules\\.pnpm\\@rainbow-me+rainbowkit@2.2._bf6eb56b03700583486c3974126056df\\node_modules\\@rainbow-me\\rainbowkit\\dist\\index.js -> ./Arc-VDBY7LNS.js",
     "files": [

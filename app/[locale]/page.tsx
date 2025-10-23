@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { Section } from '@/components/shared/Section'
 import { Carousel } from '@/components/shared/Carousel'
-import { BaseCard } from '@/components/cards/BaseCard'
+import { FeaturedBasesSection } from '@/components/sections/FeaturedBasesSection'
+import { HomeHero } from '@/components/sections/HomeHero'
 import { NodeCard } from '@/components/cards/NodeCard'
 import { PostCard } from '@/components/cards/PostCard'
 import { getAbsoluteUrl } from '@/lib/ssr-helpers'
@@ -27,30 +28,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const base = `/${locale}`
   return (
     <div>
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white border-b dark:from-gray-900 dark:to-gray-900/60 dark:border-gray-800">
-        <div className="container-responsive text-center">
-          <h1 className="text-4xl font-bold">Start Glomia life</h1>
-          <p className="mt-3 text-gray-600 dark:text-gray-300">Explore bases, nodes and stories across the world</p>
-          <div className="mt-6">
-            <Link href={`${base}/bases`} className="px-6 py-3 rounded-md bg-brand text-white">
-              Explore Bases
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HomeHero />
 
-      <Section title="Featured Bases" action={<Link href={`${base}/bases`} className="text-brand">See all</Link>}>
-        <Carousel>
-          {bases.map((b: any, i: number) => (
-            <BaseCard
-              key={b.id}
-              base={b}
-              href={`${base}/bases/${b.slug}`}
-              ctaLabel={i === 0 ? 'Lets Journey' : 'More'}
-              emphasized={i === 0}
-            />
-          ))}
-        </Carousel>
+      <Section id="featured" title="Featured Bases" action={<Link href={`${base}/bases`} className="text-brand">See all</Link>}>
+        <FeaturedBasesSection bases={bases} hrefBase={base} />
       </Section>
 
       <Section title="Featured Nodes" action={<Link href={`${base}/nodes`} className="text-brand">See all</Link>}>

@@ -11,7 +11,7 @@ export default {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#3B82F6',
+          DEFAULT: '#2563EB',
           foreground: '#ffffff'
         }
       },
@@ -22,4 +22,3 @@ export default {
   },
   plugins: []
 } satisfies Config
-
