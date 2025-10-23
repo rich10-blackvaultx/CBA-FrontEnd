@@ -7,6 +7,11 @@
   --fg: 17 24 39;
 }
 
+.dark {
+  --bg: 17 24 39;
+  --fg: 243 244 246;
+}
+
 html, body {
   height: 100%;
 }
@@ -21,10 +26,27 @@ body {
 }
 
 .card {
-  @apply rounded-2xl shadow-soft bg-white/70 backdrop-blur border border-gray-100;
+  @apply rounded-2xl shadow-soft bg-white/70 backdrop-blur border border-gray-100 dark:bg-gray-800/60 dark:border-gray-700;
 }
 
 .cover-img {
   @apply w-full h-44 object-cover rounded-t-2xl;
 }
 
+/* Inputs: range + selects (dark mode tweaks) */
+/* Range track: light gray in light, darker gray in dark */
+/* Use brand blue in light mode, neutral gray in dark */
+input[type='range'] { accent-color: #2563eb; }
+.dark input[type='range'] { accent-color: #9ca3af; }
+input[type='range']::-webkit-slider-runnable-track { height: 4px; background-color: #e5e7eb; border-radius: 9999px; }
+.dark input[type='range']::-webkit-slider-runnable-track { background-color: #6b7280; }
+input[type='range']::-moz-range-track { height: 4px; background-color: #e5e7eb; border-radius: 9999px; }
+.dark input[type='range']::-moz-range-track { background-color: #6b7280; }
+
+/* Ensure dropdown text is visible in dark mode */
+.dark select { color: rgb(243 244 246); background-color: rgb(17 24 39); border-color: rgb(55 65 81); }
+.dark select option { color: rgb(243 244 246); background-color: rgb(17 24 39); }
+/* Reduce bright blue highlight for chosen option */
+.dark select option:checked { background-color: #334155; color: #f8fafc; }
+.dark select option:hover { background-color: #374151; color: #f8fafc; }
+.dark select:focus { border-color: #6b7280; }

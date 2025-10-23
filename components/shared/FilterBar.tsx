@@ -54,7 +54,10 @@ export function FilterBar({
       </label>
       <label className="text-sm">
         <span className="block mb-1">{t('visa')}</span>
-        <select onChange={(e) => update({ visa: Number(e.target.value) })} className="w-full border rounded-md px-2 py-2">
+        <select
+          onChange={(e) => update({ visa: Number(e.target.value) })}
+          className="w-full border rounded-md px-2 py-2 bg-white text-gray-900 border-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
+        >
           <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -65,7 +68,10 @@ export function FilterBar({
       </label>
       <label className="text-sm">
         <span className="block mb-1">{t('climate')}</span>
-        <select onChange={(e) => update({ climate: e.target.value })} className="w-full border rounded-md px-2 py-2">
+        <select
+          onChange={(e) => update({ climate: e.target.value })}
+          className="w-full border rounded-md px-2 py-2 bg-white text-gray-900 border-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
+        >
           <option value="">-</option>
           <option value="tropical">tropical</option>
           <option value="temperate">temperate</option>
@@ -79,7 +85,10 @@ export function FilterBar({
       </label>
       <label className="text-sm">
         <span className="block mb-1">{t('type')}</span>
-        <select onChange={(e) => update({ type: e.target.value })} className="w-full border rounded-md px-2 py-2">
+        <select
+          onChange={(e) => update({ type: e.target.value })}
+          className="w-full border rounded-md px-2 py-2 bg-white text-gray-900 border-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
+        >
           <option value="">-</option>
           <option value="cafe">cafe</option>
           <option value="cowork">cowork</option>
@@ -89,4 +98,3 @@ export function FilterBar({
     </div>
   )
 }
-

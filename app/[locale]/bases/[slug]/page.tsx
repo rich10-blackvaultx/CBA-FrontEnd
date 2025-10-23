@@ -46,7 +46,7 @@ export default async function BaseDetailPage({ params }: { params: Promise<{ loc
 
       <div className="container-responsive py-6">
         {/* Summary row */}
-        <ul className="mt-2 grid grid-cols-2 md:grid-cols-5 gap-2 text-sm text-neutral-600">
+        <ul className="mt-2 grid grid-cols-2 md:grid-cols-5 gap-2 text-sm text-neutral-600 dark:text-neutral-300">
           <li>${detail.monthlyCost.toLocaleString()} / mo</li>
           <li>{detail.internetMbps} Mbps</li>
           <li>Visa: {['★☆☆','★★☆','★★★','★★★★','★★★★★'][detail.visaLevel-1] || detail.visaLevel}</li>
@@ -68,12 +68,12 @@ export default async function BaseDetailPage({ params }: { params: Promise<{ loc
                   { label: 'Commute', value: detail.cost.commute }
                 ].map((it) => (
                   <div key={it.label} className="card p-4">
-                    <p className="text-sm text-gray-600">{it.label}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">{it.label}</p>
                     <p className="text-xl font-semibold">{new Intl.NumberFormat(undefined, { style: 'currency', currency: detail.cost.currency }).format(it.value)}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-2 text-sm text-gray-600">
+              <div className="mt-2 text-sm text-gray-600 dark:text-gray-300">
                 Total ≈ {new Intl.NumberFormat(undefined, { style: 'currency', currency: detail.cost.currency }).format(
                   detail.cost.housing + detail.cost.cowork + detail.cost.food + detail.cost.commute
                 )} / mo

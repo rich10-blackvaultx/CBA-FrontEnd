@@ -9,9 +9,11 @@ export function LanguageSwitch() {
   const pathname = usePathname() || '/'
   const to = locale === 'en' ? pathname.replace(/^\/en/, '/zh') : pathname.replace(/^\/zh/, '/en')
   return (
-    <Link href={to} className="px-3 py-2 rounded-md border text-gray-700 hover:bg-gray-50">
+    <Link
+      href={to}
+      className="px-3 py-2 rounded-md border text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-800"
+    >
       {locale === 'en' ? '中文' : 'EN'}
     </Link>
   )
 }
-

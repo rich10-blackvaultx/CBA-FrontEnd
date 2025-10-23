@@ -11,10 +11,9 @@ export function NodeCard({ node, href }: { node: NodeItem; href: string }) {
           <h3 className="font-semibold">{node.name}</h3>
           <Tag>{node.type}</Tag>
         </div>
-        <p className="text-sm text-gray-600 mt-1">{node.address}</p>
-        <div className="text-xs text-gray-500 mt-2">Open: {node.openTime}</div>
+        <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{node.address}</p>
+        <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">Open: {node.openTime}</div>
       </div>
     </Link>
   )
 }
-

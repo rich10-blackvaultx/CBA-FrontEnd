@@ -12,7 +12,10 @@ export function WalletButtonCustom() {
         const connected = mounted && account && chain
         if (!connected)
           return (
-            <button onClick={openConnectModal} className="px-3 py-2 rounded-md border hover:bg-gray-50">
+            <button
+              onClick={openConnectModal}
+              className="px-3 py-2 rounded-md border hover:bg-gray-50 text-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-800"
+            >
               {t('connect_wallet')}
             </button>
           )
@@ -24,10 +27,16 @@ export function WalletButtonCustom() {
           )
         return (
           <div className="flex items-center gap-2">
-            <button onClick={openChainModal} className="px-2 py-2 rounded-md border hover:bg-gray-50 text-sm">
+            <button
+              onClick={openChainModal}
+              className="px-2 py-2 rounded-md border hover:bg-gray-50 text-sm text-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-800"
+            >
               {chain?.name ?? 'Chain'}
             </button>
-            <button onClick={openAccountModal} className="px-3 py-2 rounded-md border hover:bg-gray-50 text-sm">
+            <button
+              onClick={openAccountModal}
+              className="px-3 py-2 rounded-md border hover:bg-gray-50 text-sm text-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-800"
+            >
               {truncateAddress(account?.address)}
             </button>
           </div>
@@ -36,4 +45,3 @@ export function WalletButtonCustom() {
     </ConnectButton.Custom>
   )
 }
-

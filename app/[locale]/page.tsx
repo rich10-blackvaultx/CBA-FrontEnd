@@ -27,10 +27,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const base = `/${locale}`
   return (
     <div>
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white border-b">
+      <section className="py-16 bg-gradient-to-b from-blue-50 to-white border-b dark:from-gray-900 dark:to-gray-900/60 dark:border-gray-800">
         <div className="container-responsive text-center">
           <h1 className="text-4xl font-bold">Start Glomia life</h1>
-          <p className="mt-3 text-gray-600">Explore bases, nodes and stories across the world</p>
+          <p className="mt-3 text-gray-600 dark:text-gray-300">Explore bases, nodes and stories across the world</p>
           <div className="mt-6">
             <Link href={`${base}/bases`} className="px-6 py-3 rounded-md bg-brand text-white">
               Explore Bases

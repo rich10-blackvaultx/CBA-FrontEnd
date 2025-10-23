@@ -5,13 +5,14 @@ import { usePathname } from 'next/navigation'
 import { useI18n } from '@/hooks/useI18n'
 import { LanguageSwitch } from './LanguageSwitch'
 import { WalletButtonCustom } from './WalletButtonCustom'
+import { ThemeToggle } from './ThemeToggle'
 import { useUIStore } from '@/stores/useUIStore'
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   const pathname = usePathname()
   const active = pathname?.startsWith(href)
   return (
-    <Link href={href} className={`px-3 py-2 rounded-md ${active ? 'text-brand' : 'text-gray-700'}`}>
+    <Link href={href} className={`px-3 py-2 rounded-md ${active ? 'text-brand' : 'text-gray-700 dark:text-gray-300'}`}>
       {children}
     </Link>
   )
@@ -22,7 +23,7 @@ export function NavbarIntl() {
   const openNI = useUIStore((s) => s.openNI)
   const base = `/${locale}`
   return (
-    <header className="border-b bg-white/70 backdrop-blur sticky top-0 z-30">
+    <header className="border-b bg-white/70 backdrop-blur sticky top-0 z-30 dark:bg-gray-900/60 dark:border-gray-800">
       <div className="container-responsive flex items-center h-16 justify-between">
         <Link href={base} className="font-semibold text-xl">
           Glomia <span className="text-brand">Life</span>
@@ -37,6 +38,7 @@ export function NavbarIntl() {
           <NavLink href={`${base}/me`}>{t('nav.me')}</NavLink>
         </nav>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <LanguageSwitch />
           <WalletButtonCustom />
         </div>
@@ -44,4 +46,3 @@ export function NavbarIntl() {
     </header>
   )
 }
-
