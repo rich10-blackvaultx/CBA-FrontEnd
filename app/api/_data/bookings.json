@@ -1,0 +1,30 @@
+[
+  {
+    "id": "wfnmaz3wgfr",
+    "nodeId": "node-mexico-city-cafe-1",
+    "baseId": "base-mexico-city",
+    "start": "2025-10-27T19:11:00.000Z",
+    "end": "2025-10-27T21:11:00.000Z",
+    "type": "cowork_day",
+    "includeHousing": false,
+    "includeCowork": true,
+    "timezone": "Asia/Shanghai",
+    "note": "",
+    "createdAt": "2025-10-28T03:11:29.754Z",
+    "status": "pending"
+  },
+  {
+    "id": "qyjkpz429s",
+    "nodeId": "node-singapore-cowork-1",
+    "baseId": "base-singapore",
+    "start": "2025-10-27T18:58:00.000Z",
+    "end": "2025-10-27T20:58:00.000Z",
+    "type": "cowork_day",
+    "includeHousing": false,
+    "includeCowork": true,
+    "timezone": "Asia/Shanghai",
+    "note": "",
+    "createdAt": "2025-10-28T02:58:26.869Z",
+    "status": "pending"
+  }
+]

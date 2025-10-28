@@ -1,0 +1,3 @@
+[
+  { "id": "oss-graph", "name": "Open City Graph", "desc": "Open data graph for nomad cities.", "tags": ["data","map"], "stars": 12, "contributors": ["alice","bob"], "tasks": [ { "id": "k1", "title": "Add Lisbon nodes", "status": "todo" } ] }
+]

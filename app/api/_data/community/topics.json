@@ -1,0 +1,4 @@
+[
+  { "id": "t1", "groupId": "g-ai-bali", "type": "article", "title": "Weekly paper reading list", "content": "Let's share papers.", "author": "Alice", "createdAt": "2024-10-01T10:00:00Z", "replies": 1, "up": 3 },
+  { "id": "t2", "groupId": "g-web3-lisbon", "type": "question", "title": "How to run a local devnet?", "content": "Best tools?", "author": "Bob", "createdAt": "2024-10-03T10:00:00Z", "replies": 0, "up": 2 }
+]

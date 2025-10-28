@@ -1,0 +1,4 @@
+[
+  { "id": "p-demo-1", "title": "Landing page redesign", "desc": "Tailwind + Next", "skills": ["design","react"], "timezone": "UTC+1", "budget": { "min": 1500, "max": 3000, "currency": "USD" }, "status": "open" },
+  { "id": "p-demo-2", "title": "GitHub Actions CI for monorepo", "desc": "CI/CD", "skills": ["ci","github"], "timezone": "UTC+8", "budget": { "min": 800, "max": 1500, "currency": "USD" }, "status": "open" }
+]

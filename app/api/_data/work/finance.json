@@ -1,0 +1,71 @@
+[
+  {
+    "id": "3i0wzchue8",
+    "type": "income",
+    "title": "",
+    "category": "",
+    "amount": 0,
+    "currency": "USD",
+    "date": "2025-10-28"
+  },
+  {
+    "id": "4nbud03czkb",
+    "type": "1",
+    "title": "3",
+    "category": "",
+    "amount": 2,
+    "currency": "USD",
+    "date": "2025-10-28"
+  },
+  {
+    "id": "tofpp6vk8t",
+    "type": "111",
+    "title": "3333",
+    "category": "",
+    "amount": 222,
+    "currency": "USD",
+    "date": "2025-10-28"
+  },
+  {
+    "id": "8wbu3dhivtg",
+    "type": "income",
+    "title": "",
+    "category": "",
+    "amount": 0,
+    "currency": "USD",
+    "date": "2025-10-28"
+  },
+  {
+    "id": "97owjjgro8",
+    "type": "income",
+    "title": "",
+    "category": "",
+    "amount": 0,
+    "currency": "USD",
+    "date": "2025-10-28"
+  },
+  {
+    "id": "f1",
+    "type": "income",
+    "title": "Freelance payout",
+    "amount": 1200,
+    "currency": "USDC",
+    "date": "2024-10-01"
+  },
+  {
+    "id": "f2",
+    "type": "expense",
+    "title": "Figma",
+    "amount": 15,
+    "currency": "USD",
+    "date": "2024-10-03"
+  },
+  {
+    "id": "f3",
+    "type": "income",
+    "title": "RWA yield",
+    "amount": 35,
+    "currency": "USD",
+    "date": "2024-10-05"
+  }
+]

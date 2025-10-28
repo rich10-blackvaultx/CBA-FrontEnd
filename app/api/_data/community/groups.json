@@ -1,0 +1,4 @@
+[
+  { "id": "g-ai-bali", "name": "AI · Bali", "city": "Bali", "tags": ["AI","meetup"], "members": [], "desc": "Bali AI makers community" },
+  { "id": "g-web3-lisbon", "name": "Web3 · Lisbon", "city": "Lisbon", "tags": ["Web3","hackathon"], "members": [], "desc": "Lisbon web3 founders and devs" }
+]

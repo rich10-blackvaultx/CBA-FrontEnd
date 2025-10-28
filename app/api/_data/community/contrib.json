@@ -1,0 +1,4 @@
+[
+  { "id": "c1", "projectId": "oss-graph", "user": "alice", "type": "code", "points": 10, "message": "import pipeline", "createdAt": "2024-10-02T10:00:00Z" },
+  { "id": "c2", "projectId": "oss-graph", "user": "bob", "type": "docs", "points": 5, "message": "docs", "createdAt": "2024-10-03T10:00:00Z" }
+]
