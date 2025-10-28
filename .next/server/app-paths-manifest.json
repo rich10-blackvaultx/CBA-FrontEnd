@@ -1,9 +1,0 @@
-{
-  "/api/bases/route": "app/api/bases/route.js",
-  "/[locale]/community/page": "app/[locale]/community/page.js",
-  "/[locale]/community/projects/[id]/page": "app/[locale]/community/projects/[id]/page.js",
-  "/[locale]/page": "app/[locale]/page.js",
-  "/[locale]/community/post/[id]/page": "app/[locale]/community/post/[id]/page.js",
-  "/[locale]/bases/page": "app/[locale]/bases/page.js",
-  "/[locale]/bases/[slug]/page": "app/[locale]/bases/[slug]/page.js"
-}
