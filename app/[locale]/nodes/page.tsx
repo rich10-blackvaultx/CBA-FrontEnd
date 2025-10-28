@@ -1,10 +1,11 @@
-"use client"
+﻿"use client"
 
 import { useQuery } from '@tanstack/react-query'
 import { fetchNodes } from '@/services/nodes'
 import { useState } from 'react'
 import { FilterBar, type FilterValue } from '@/components/shared/FilterBar'
 import { NodeCard } from '@/components/cards/NodeCard'
+import { LoadPill } from '@/components/node/LoadPill'
 import { useParams } from 'next/navigation'
 import { PAGINATION } from '@/lib/constants'
 
@@ -38,7 +39,7 @@ export default function NodesPage() {
           </select>
         </label>
         <label className="text-sm">
-          <span className="block mb-1">Seats ≥</span>
+          <span className="block mb-1">Seats</span>
           <input
             type="number"
             min={0}
@@ -53,9 +54,7 @@ export default function NodesPage() {
         {list.slice(start, end).map((n: any) => (
           <div key={n.id} className="relative">
             <NodeCard node={n} href={`/${locale}/nodes/${n.id}`} />
-            <div className="absolute right-2 top-2 text-xs bg-black/60 text-white px-2 py-1 rounded-full">
-              Crowded: --
-            </div>
+            <LoadPill nodeId={n.id} />
           </div>
         ))}
       </div>

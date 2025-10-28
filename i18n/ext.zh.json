@@ -1,27 +1,117 @@
 {
-  "base": {
-    "summary": { "cost": "预算/月", "internet": "网速", "visa": "签证", "safety": "安全", "community": "社群", "stay": "停留", "climate": "气候" },
-    "timeline": { "title": "时间线", "verify": "核验清单" },
-    "costs": { "title": "费用", "total": "合计 ≈ {value} / 月", "currency": "币种" },
-    "signals": { "title": "真实信号", "active": "近30天活动", "residents": "近30天驻留", "skills": "Top 技能", "faq": "常见问题" },
-    "actions": { "apply": "报名", "join": "加入", "viewMap": "查看地图", "connectFirst": "请先连接钱包" },
-    "nodes": { "title": "推荐节点", "open": "营业", "noise": { "quiet": "安静", "normal": "正常", "lively": "热闹" } }
+  "modules": {
+    "node": {
+      "title": "Node —— 全球工作与生活枢纽",
+      "goal": "为数字游民提供安全、便捷、可持续的办公与居住空间。",
+      "features": {
+        "network": "全球基地网络，支持跨国共享办公与联合居住（长期/短期）预订",
+        "services": "配套设施齐全：高速网络、会议室、厨房、休闲区、健身与城市交通",
+        "matching": "基于技能、兴趣与项目需求的智能匹配，并提供当地活动与社交机会"
+      }
+    },
+    "work": {
+      "title": "Work —— 分布式生产力平台",
+      "goal": "让数字游民在全球范围内高效工作、协作与创造价值。",
+      "features": {
+        "collab": "远程协作与任务管理：项目发布、任务分配、进度跟踪，并集成 Slack/Notion/Figma/GitHub",
+        "matching": "基于技能、兴趣、时区的机会匹配，支持短期合约、自由职业与长期协作",
+        "finance": "多币种结算、稳定币支付与 RWA 资产支持，并提供税务与合规辅助"
+      }
+    },
+    "community": {
+      "title": "Community —— 社交与共创生态",
+      "goal": "构建全球数字游民的互助、学习与协作网络。",
+      "features": {
+        "groups": "基于职业、技能、兴趣或城市的社群，包含论坛、问答与知识分享",
+        "events": "城市聚会、工作坊、黑客松、Demo Day，支持报名、日历同步与通知",
+        "open": "支持开源项目托管与协作，提供贡献排行榜、声誉体系与奖励机制"
+      }
+    }
   },
-  "jobs": {
-    "filters": { "skills": "技能", "budget": "预算", "timezone": "时区", "payType": "结算方式" },
-    "cta": { "connect": "连接钱包以投标", "bid": "提交投标" }
+  "nodeUI": {
+    "common": { "open": "营业", "seats": "座位", "loading": "加载中..." },
+    "booking": {
+      "title": "预订",
+      "start": "开始",
+      "end": "结束",
+      "type": "类型",
+      "type_day": "共享日票",
+      "type_coliving": "联合居住",
+      "type_combo": "组合（居住 + 办公）",
+      "timezone": "时区",
+      "includeHousing": "包含居住",
+      "includeCowork": "包含办公",
+      "note": "备注",
+      "note_placeholder": "偏好或到达说明",
+      "availability_checking": "正在查询可用性...",
+      "submit": "提交预订",
+      "ok": "请求已提交，我们将尽快确认！"
+    },
+    "reviews": {
+      "title": "评分与评价",
+      "avg": "平均评分：{value} · {count} 条",
+      "empty": "暂无评价",
+      "add": "添加评价",
+      "name_placeholder": "你的名字",
+      "content_placeholder": "分享你的体验",
+      "submit": "提交"
+    },
+    "guides": { "title": "城市攻略" },
+    "recommend": {
+      "title": "为你推荐",
+      "skills": "技能",
+      "skills_placeholder": "ai, web3, 设计",
+      "interests": "兴趣",
+      "interests_placeholder": "wifi, 社区, 会议室",
+      "empty": "暂无推荐"
+    },
+    "activities": {
+      "title": "活动与社交",
+      "empty": "暂无活动",
+      "details": "详情",
+      "free": "免费",
+      "quota": "名额"
+    },
+    "essentials": {
+      "title": "城市生活攻略",
+      "visa": "签证",
+      "insurance": "保险",
+      "tax": "税务",
+      "medical": "医疗"
+    },
+    "facilities": {
+      "title": "配套设施",
+      "office": "办公设施",
+      "living": "生活设施",
+      "fallback_office_1": "高速网络",
+      "fallback_office_2": "会议室",
+      "fallback_living_1": "休闲区",
+      "fallback_living_2": "交通指南"
+    },
+    "load": { "label": "负载：{value}%" },
+    "cta": { "joinTitle": "加入", "joinButton": "加入社区", "connectFirst": "请先连接钱包" }
   },
-  "common": { "notImplemented": "功能开发中，敬请期待" }
-  ,
+  "workUI": {
+    "title": "Work —— 分布式生产力",
+    "projects": { "title": "项目", "create": "创建项目", "create_prompt": "输入项目标题", "status": "状态" },
+    "tasks": { "title": "任务", "add": "添加", "add_placeholder": "新任务...", "complete": "完成", "reopen": "重新打开" },
+    "match": { "title": "项目与机会匹配", "skills": "技能", "interests": "兴趣", "timezone": "时区", "add_to_my_work": "加入到我的工作", "clear": "清空选择" },
+    "mywork": { "title": "我的工作", "empty": "暂无项目" },
+    "finance": { "title": "财务", "income": "收入", "expense": "支出", "records": "记录", "add": "新增记录", "add_prompt": "类型, 金额, 标题", "note": "支持多币种、稳定币与 RWA（示例数据）" },
+    "integrations": { "title": "集成（Slack / Notion / Figma / GitHub）" },
+    "payments": { "title": "结算与发放", "create": "创建打款" }
+  },
+  "workActions": { "myWork": "我的工作", "myFinance": "我的财务", "myRecords": "我的记录", "view": "查看", "add": "新增", "close": "关闭" },
   "createActivity": {
-    "title": "发起活动 · 链接人与城市",
+    "title": "发起活动 · 连接人和城市",
     "poster": "上传海报（16:9）",
     "core": { "title": "活动名称", "tagline": "一句话亮点", "desc": "描述说明" },
-    "timeplace": { "base": "选择基地", "node": "选择节点", "start": "开始时间", "end": "结束时间", "timezone": "时区", "locationNote": "地址补充" },
-    "ticket": { "type": "票务", "free": "免费", "paid": "付费", "price": "票价", "currency": "币种", "quota": "名额", "waitlist": "超额进入等候名单" },
-    "host": { "host": "主持人/嘉宾", "avatar": "上传头像", "identity": "身份标签" },
-    "actions": { "save": "保存草稿", "publish": "立即发布活动", "connectFirst": "请先连接钱包" },
-    "review": "发布前复核",
+    "timeplace": { "base": "选择基地", "node": "选择节点", "start": "开始时间", "end": "结束时间", "timezone": "时区", "locationNote": "地点说明" },
+    "ticket": { "type": "票务", "free": "免费", "paid": "付费", "price": "票价", "currency": "币种", "quota": "名额", "waitlist": "满额进入候补" },
+    "host": { "host": "主办与协办", "avatar": "上传头像", "identity": "身份标签" },
+    "actions": { "save": "保存草稿", "publish": "立即发布", "connectFirst": "请先连接钱包" },
+    "review": "发布前预览",
     "success": "发布成功"
   }
 }
+

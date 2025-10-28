@@ -4,7 +4,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { truncateAddress } from '@/lib/constants'
 import { useTranslations } from 'next-intl'
 
-export function WalletButtonCustom() {
+export function WalletButtonCustom({ variant = 'default' }: { variant?: 'default' | 'ghost' }) {
   const t = useTranslations('actions')
   return (
     <ConnectButton.Custom>
@@ -14,14 +14,18 @@ export function WalletButtonCustom() {
           return (
             <button
               onClick={openConnectModal}
-              className="px-3 py-2 rounded-md border hover:bg-gray-50 text-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-800"
+              className={
+                variant === 'ghost'
+                  ? 'h-9 px-3 rounded-md text-white/90 hover:text-white text-sm flex items-center'
+                  : 'h-9 px-3 rounded-md border hover:bg-gray-50 text-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-800 text-sm flex items-center'
+              }
             >
               {t('connect_wallet')}
             </button>
           )
         if (chain?.unsupported)
           return (
-            <button onClick={openChainModal} className="px-3 py-2 rounded-md bg-amber-500 text-white">
+            <button onClick={openChainModal} className={variant==='ghost' ? 'h-9 px-3 rounded-md text-amber-200 hover:text-amber-100 text-sm flex items-center' : 'h-9 px-3 rounded-md bg-amber-500 text-white text-sm flex items-center'}>
               {t('switch_network', { default: 'Switch Network' })}
             </button>
           )
@@ -29,13 +33,21 @@ export function WalletButtonCustom() {
           <div className="flex items-center gap-2">
             <button
               onClick={openChainModal}
-              className="px-2 py-2 rounded-md border hover:bg-gray-50 text-sm text-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-800"
+              className={
+                variant === 'ghost'
+                  ? 'h-9 px-3 rounded-md text-white/90 hover:text-white text-sm flex items-center'
+                  : 'h-9 px-3 rounded-md border hover:bg-gray-50 text-sm text-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-800 flex items-center'
+              }
             >
               {chain?.name ?? 'Chain'}
             </button>
             <button
               onClick={openAccountModal}
-              className="px-3 py-2 rounded-md border hover:bg-gray-50 text-sm text-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-800"
+              className={
+                variant === 'ghost'
+                  ? 'h-9 px-3 rounded-md text-white/90 hover:text-white text-sm flex items-center'
+                  : 'h-9 px-3 rounded-md border hover:bg-gray-50 text-sm text-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-800 flex items-center'
+              }
             >
               {truncateAddress(account?.address)}
             </button>

@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { PostCard } from '@/components/cards/PostCard'
 import { useUIStore } from '@/stores/useUIStore'
+import { useI18n } from '@/hooks/useI18n'
 
 export default function CommunityPage() {
   const { locale } = useParams<{ locale: string }>()
   const [posts, setPosts] = useState<any[]>([])
   const openNI = useUIStore((s) => s.openNI)
+  const { t } = useI18n()
   useEffect(() => {
     ;(async () => {
       const res = await fetch('/api/community')
@@ -18,6 +20,29 @@ export default function CommunityPage() {
   }, [])
   return (
     <div className="container-responsive py-6 space-y-4">
+      <div className="card p-4">
+        <h2 className="text-xl font-semibold">{t('modules.community.title')}</h2>
+        <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{t('modules.community.goal')}</p>
+        <ul className="mt-3 text-sm list-disc pl-5 space-y-1">
+          <li>{t('modules.community.features.groups')}</li>
+          <li>{t('modules.community.features.events')}</li>
+          <li>{t('modules.community.features.open')}</li>
+        </ul>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <a href={`/${locale}/community/groups`} className="card p-4">
+          <div className="font-semibold">{t('nav.groups') || 'Groups'}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{t('modules.community.features.groups')}</div>
+        </a>
+        <a href={`/${locale}/community/projects`} className="card p-4">
+          <div className="font-semibold">{t('nav.oss') || 'Open-source'}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{t('modules.community.features.open')}</div>
+        </a>
+        <a href={`/${locale}/community/leaderboard`} className="card p-4">
+          <div className="font-semibold">Leaderboard</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Reputation & points</div>
+        </a>
+      </div>
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Community</h1>
         <button onClick={() => openNI('Create Post')} className="px-4 py-2 rounded-md bg-brand text-white">
@@ -32,4 +57,3 @@ export default function CommunityPage() {
     </div>
   )
 }
-

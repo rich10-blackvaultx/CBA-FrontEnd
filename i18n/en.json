@@ -1,9 +1,11 @@
-{
+﻿{
   "nav": {
-    "bases": "Bases",
+    "bases": "Node",
     "nodes": "Nodes",
     "community": "Community",
-    "jobs": "Jobs",
+    "jobs": "Work",
+    "groups": "Groups",
+    "oss": "Open-source",
     "me": "Me"
   },
   "home": {
@@ -32,7 +34,7 @@
   "base": {
     "summary": { "cost": "Budget / month", "internet": "Internet", "visa": "Visa", "safety": "Safety", "community": "Community", "stay": "Stay", "climate": "Climate" },
     "timeline": { "title": "Timeline", "verify": "Checklist" },
-    "costs": { "title": "Costs", "total": "Total ≈ {value} / mo", "currency": "Currency" },
+    "costs": { "title": "Costs", "total": "Total 鈮?{value} / mo", "currency": "Currency" },
     "signals": { "title": "Signals", "active": "Active (30d)", "residents": "Residents (30d)", "skills": "Top skills", "faq": "FAQ" },
     "actions": { "apply": "Apply", "join": "Join", "viewMap": "View Map", "connectFirst": "Please connect wallet" },
     "nodes": { "title": "Recommended Nodes", "open": "Open", "noise": { "quiet": "quiet", "normal": "normal", "lively": "lively" } }
@@ -73,3 +75,5 @@
     "step_poster": "Poster"
   }
 }
+
+

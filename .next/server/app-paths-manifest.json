@@ -1,12 +1,9 @@
 {
   "/api/bases/route": "app/api/bases/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/nodes/route": "app/api/nodes/route.js",
-  "/api/community/route": "app/api/community/route.js",
-  "/[locale]/page": "app/[locale]/page.js",
-  "/[locale]/bases/page": "app/[locale]/bases/page.js",
-  "/[locale]/create/activity/page": "app/[locale]/create/activity/page.js",
   "/[locale]/community/page": "app/[locale]/community/page.js",
-  "/[locale]/nodes/page": "app/[locale]/nodes/page.js",
+  "/[locale]/community/projects/[id]/page": "app/[locale]/community/projects/[id]/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/community/post/[id]/page": "app/[locale]/community/post/[id]/page.js",
+  "/[locale]/bases/page": "app/[locale]/bases/page.js",
   "/[locale]/bases/[slug]/page": "app/[locale]/bases/[slug]/page.js"
 }

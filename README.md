@@ -41,7 +41,15 @@ Visit `/zh` or `/en`.
   - GET `/api/bases?filter=...` → `BaseSummary[]`
   - GET `/api/bases?slug=...` → `BaseDetail`
   - GET `/api/nodes?baseId=...` → `NodeItem[]`
-  - GET `/api/nodes?id=...` → `NodeItem`
+- GET `/api/nodes?id=...` → `NodeItem`
+ - GET `/api/availability?nodeId=...&at=ISO` → `{seats, occupied, available, load}`
+ - GET `/api/reviews?nodeId=...|baseId=...` → `Review[]`
+ - POST `/api/reviews` → create a review `{ nodeId|baseId, author, rating, content }`
+ - GET `/api/bookings?nodeId=...|baseId=...` → `Booking[]`
+ - POST `/api/bookings` → create a booking `{ type, start, end, includeHousing?, includeCowork? }`
+ - GET `/api/guides?baseId=...` → posts tagged with base slug
+ - GET `/api/essentials?baseId=...` → `{ visa, insurance, tax, medical }`
+ - GET `/api/recommend?skills=a,b&interests=x,y&baseId=...` → recommended nodes
   - GET `/api/community` and `/api/community?id=...` → `Post[] | Post`
   - GET/POST `/api/activities` → `Activity[]` | create
 - Server Actions preferred for creating activity: see `lib/actions.ts#createActivityAction`

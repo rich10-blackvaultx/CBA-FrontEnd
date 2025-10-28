@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import type { Job } from '@/types/job'
+import { useI18n } from '@/hooks/useI18n'
 
 export default function JobsPage({}: {}) {
   const [jobs, setJobs] = useState<Job[]>([])
@@ -10,6 +11,7 @@ export default function JobsPage({}: {}) {
   const [budget, setBudget] = useState<{ min?: number; max?: number }>({})
   const [timezone, setTimezone] = useState('')
   const [payType, setPayType] = useState('')
+  const { t } = useI18n()
 
   useEffect(() => {
     ;(async () => {
@@ -32,6 +34,17 @@ export default function JobsPage({}: {}) {
 
   return (
     <div className="container-responsive py-6 space-y-4">
+      {/* Module intro */}
+      <div className="card p-4">
+        <h2 className="text-xl font-semibold">{t('modules.work.title')}</h2>
+        <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{t('modules.work.goal')}</p>
+        <ul className="mt-3 text-sm list-disc pl-5 space-y-1">
+          <li>{t('modules.work.features.collab')}</li>
+          <li>{t('modules.work.features.matching')}</li>
+          <li>{t('modules.work.features.finance')}</li>
+        </ul>
+      </div>
+
       <h1 className="text-2xl font-semibold">Jobs</h1>
       <div className="card p-4 grid grid-cols-2 md:grid-cols-6 gap-3">
         <label className="text-sm md:col-span-2">
@@ -79,4 +92,3 @@ export default function JobsPage({}: {}) {
     </div>
   )
 }
-

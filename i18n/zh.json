@@ -1,13 +1,15 @@
 {
   "nav": {
-    "bases": "基地",
+    "bases": "Node",
     "nodes": "节点",
     "community": "社区",
-    "jobs": "工作",
+    "jobs": "Work",
+    "groups": "群组",
+    "oss": "开源",
     "me": "我的"
   },
   "home": {
-    "hero_title": "Start Glomia life",
+    "hero_title": "开启你的 Glomia 生活",
     "hero_sub": "探索全球的基地、节点与故事",
     "view_bases": "查看基地",
     "featured_bases": "精选基地",
@@ -19,28 +21,28 @@
     "disconnect": "断开连接",
     "switch_network": "切换网络",
     "learn_more": "了解更多",
-    "apply": "报名",
+    "apply": "申请",
     "join": "加入",
     "view_map": "查看地图",
-    "post": "发帖",
+    "post": "发布",
     "create": "创建",
     "save_draft": "保存草稿",
     "submit": "提交",
-    "submit_api": "API 提交",
-    "not_implemented": "暂未开发"
+    "submit_api": "通过 API 提交",
+    "not_implemented": "暂未开放"
   },
   "filters": {
     "budget": "预算/月",
-    "internet": "网速",
+    "internet": "网络",
     "visa": "签证难度",
     "climate": "气候",
-    "community": "社区活跃",
+    "community": "社区活跃度",
     "type": "类型",
     "seats": "座位",
     "open": "营业时间"
   },
   "tips": {
-    "not_ready": "该功能暂未开放。",
+    "not_ready": "此功能暂未开放。",
     "need_wallet": "请先连接钱包。",
     "insufficient_perm": "当前声誉或权限不足。"
   },
@@ -53,9 +55,9 @@
     "startAt": "开始时间",
     "endAt": "结束时间",
     "price": "价格",
-    "poster": "海报地址",
-    "step_basic": "基础",
-    "step_time_place": "时间地点",
+    "poster": "海报 URL",
+    "step_basic": "基础信息",
+    "step_time_place": "时间与地点",
     "step_ticket": "票务/名额",
     "step_poster": "海报"
   }

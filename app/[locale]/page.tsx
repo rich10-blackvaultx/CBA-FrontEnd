@@ -1,10 +1,4 @@
-import Link from 'next/link'
-import { Section } from '@/components/shared/Section'
-import { Carousel } from '@/components/shared/Carousel'
-import { FeaturedBasesSection } from '@/components/sections/FeaturedBasesSection'
 import { HomeHero } from '@/components/sections/HomeHero'
-import { NodeCard } from '@/components/cards/NodeCard'
-import { PostCard } from '@/components/cards/PostCard'
 import { getAbsoluteUrl } from '@/lib/ssr-helpers'
 
 async function getHomeData() {
@@ -23,32 +17,12 @@ async function getHomeData() {
 }
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
-  const { bases, nodes, posts } = await getHomeData()
+  const { bases } = await getHomeData()
   const { locale } = await params
   const base = `/${locale}`
   return (
     <div>
-      <HomeHero />
-
-      <Section id="featured" title="Featured Bases" action={<Link href={`${base}/bases`} className="text-brand">See all</Link>}>
-        <FeaturedBasesSection bases={bases} hrefBase={base} />
-      </Section>
-
-      <Section title="Featured Nodes" action={<Link href={`${base}/nodes`} className="text-brand">See all</Link>}>
-        <Carousel>
-          {nodes.map((n: any) => (
-            <NodeCard key={n.id} node={n} href={`${base}/nodes/${n.id}`} />
-          ))}
-        </Carousel>
-      </Section>
-
-      <Section title="Community Stories" action={<Link href={`${base}/community`} className="text-brand">See all</Link>}>
-        <Carousel>
-          {posts.map((p: any) => (
-            <PostCard key={p.id} post={p} href={`${base}/community/post/${p.id}`} />
-          ))}
-        </Carousel>
-      </Section>
+      <HomeHero ctaHref={`${base}/bases`} slides={bases.slice(0,5).map((b:any)=>({ image: b.coverUrl, title: b.name, subtitle: b.country }))} />
     </div>
   )
 }
