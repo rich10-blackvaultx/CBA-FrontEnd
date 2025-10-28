@@ -1,4 +1,47 @@
 [
-  { "id": "c1", "projectId": "oss-graph", "user": "alice", "type": "code", "points": 10, "message": "import pipeline", "createdAt": "2024-10-02T10:00:00Z" },
-  { "id": "c2", "projectId": "oss-graph", "user": "bob", "type": "docs", "points": 5, "message": "docs", "createdAt": "2024-10-03T10:00:00Z" }
+  {
+    "id": "lzbkw6lpkvc",
+    "projectId": "oss-graph",
+    "user": "you",
+    "type": "code",
+    "points": 5,
+    "message": "",
+    "createdAt": "2025-10-28T06:17:14.527Z"
+  },
+  {
+    "id": "7nfte2a7rqo",
+    "projectId": "oss-graph",
+    "user": "you",
+    "type": "code",
+    "points": 5,
+    "message": "",
+    "createdAt": "2025-10-28T06:17:13.482Z"
+  },
+  {
+    "id": "bguh4nh0m0i",
+    "projectId": "oss-graph",
+    "user": "you",
+    "type": "code",
+    "points": 5,
+    "message": "",
+    "createdAt": "2025-10-28T06:17:12.243Z"
+  },
+  {
+    "id": "c1",
+    "projectId": "oss-graph",
+    "user": "alice",
+    "type": "code",
+    "points": 10,
+    "message": "import pipeline",
+    "createdAt": "2024-10-02T10:00:00Z"
+  },
+  {
+    "id": "c2",
+    "projectId": "oss-graph",
+    "user": "bob",
+    "type": "docs",
+    "points": 5,
+    "message": "docs",
+    "createdAt": "2024-10-03T10:00:00Z"
+  }
 ]

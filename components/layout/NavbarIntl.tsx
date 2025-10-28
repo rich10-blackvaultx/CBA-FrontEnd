@@ -20,7 +20,7 @@ export function NavbarIntl() {
         {/* Left menus (all under Pages) */}
         <nav className="hidden md:flex items-center gap-2">
           <div className="relative group">
-            <button className="px-3 py-2 rounded-md text-gray-800 dark:text-gray-200 group-hover:text-brand">Pages</button>
+            <button className="px-3 py-2 rounded-md text-gray-800 dark:text-gray-200 group-hover:text-brand">{t('nav.pages')}</button>
             <div className="absolute left-0 mt-1 hidden group-hover:block card p-2 min-w-44 menu-pop z-50">
               <Link href={`${base}/bases`} className="block px-3 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">{t('nav.bases')}</Link>
               <Link href={`${base}/work`} className="block px-3 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">{t('nav.jobs')}</Link>
@@ -40,7 +40,7 @@ export function NavbarIntl() {
 
         {/* Right controls */}
         <div className={`hidden md:flex items-center justify-end gap-2 ${onHome ? 'text-white' : ''}`}>
-          <button onClick={() => openNI('Contact')} className={`${onHome ? 'text-white/90 hover:text-white' : 'text-gray-800 dark:text-gray-200 hover:text-brand'} h-9 px-3 rounded-md text-sm`}>Contact</button>
+          <button onClick={() => openNI('Contact')} className={`${onHome ? 'text-white/90 hover:text-white' : 'text-gray-800 dark:text-gray-200 hover:text-brand'} h-9 px-3 rounded-md text-sm`}>{t('nav.contact')}</button>
           {/* removed search box per request */}
           <ThemeToggle variant={onHome ? 'ghost' : 'default'} />
           <LanguageSwitch variant={onHome ? 'ghost' : 'default'} />

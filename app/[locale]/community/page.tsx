@@ -20,15 +20,7 @@ export default function CommunityPage() {
   }, [])
   return (
     <div className="container-responsive py-6 space-y-4">
-      <div className="card p-4">
-        <h2 className="text-xl font-semibold">{t('modules.community.title')}</h2>
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{t('modules.community.goal')}</p>
-        <ul className="mt-3 text-sm list-disc pl-5 space-y-1">
-          <li>{t('modules.community.features.groups')}</li>
-          <li>{t('modules.community.features.events')}</li>
-          <li>{t('modules.community.features.open')}</li>
-        </ul>
-      </div>
+      {/* Module intro hidden per request */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         <a href={`/${locale}/community/groups`} className="card p-4">
           <div className="font-semibold">{t('nav.groups') || 'Groups'}</div>

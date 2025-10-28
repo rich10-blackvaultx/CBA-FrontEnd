@@ -1,17 +1,20 @@
 {
   "nav": {
-    "bases": "Node",
+    "bases": "基地",
     "nodes": "节点",
     "community": "社区",
-    "jobs": "Work",
+    "jobs": "工作",
     "groups": "群组",
     "oss": "开源",
-    "me": "我的"
+    "me": "我的",
+    "pages": "页面",
+    "contact": "联系"
   },
   "home": {
     "hero_title": "开启你的 Glomia 生活",
     "hero_sub": "探索全球的基地、节点与故事",
     "view_bases": "查看基地",
+    "get_started": "开始探索",
     "featured_bases": "精选基地",
     "featured_nodes": "精选节点",
     "community_stories": "社区故事"

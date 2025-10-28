@@ -60,23 +60,25 @@ export function FilterBar({
       <label className="text-sm">
         <span className="block mb-1">{t('budget')}</span>
         <input
-          type="range"
-          min={100}
-          max={5000}
+          type="number"
+          inputMode="numeric"
+          min={0}
           step={50}
-          onChange={(e) => update({ budget: Number(e.target.value) })}
-          className="w-full"
+          placeholder="USD / mo"
+          onChange={(e) => update({ budget: e.target.value ? Number(e.target.value) : undefined })}
+          className="w-full border rounded-md px-2 py-2 bg-white text-gray-900 border-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
         />
       </label>
       <label className="text-sm">
         <span className="block mb-1">{t('internet')}</span>
         <input
-          type="range"
-          min={10}
-          max={1000}
+          type="number"
+          inputMode="numeric"
+          min={0}
           step={10}
-          onChange={(e) => update({ internet: Number(e.target.value) })}
-          className="w-full"
+          placeholder="Mbps"
+          onChange={(e) => update({ internet: e.target.value ? Number(e.target.value) : undefined })}
+          className="w-full border rounded-md px-2 py-2 bg-white text-gray-900 border-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
         />
       </label>
       <label className="text-sm">

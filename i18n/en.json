@@ -1,17 +1,20 @@
 ﻿{
   "nav": {
-    "bases": "Node",
+    "bases": "Nodes",
     "nodes": "Nodes",
     "community": "Community",
     "jobs": "Work",
     "groups": "Groups",
     "oss": "Open-source",
-    "me": "Me"
+    "me": "Me",
+    "pages": "Pages",
+    "contact": "Contact"
   },
   "home": {
     "hero_title": "Start Glomia life",
     "hero_sub": "Explore bases, nodes and stories across the world",
     "view_bases": "Explore Bases",
+    "get_started": "Get Started",
     "featured_bases": "Featured Bases",
     "featured_nodes": "Featured Nodes",
     "community_stories": "Community Stories"

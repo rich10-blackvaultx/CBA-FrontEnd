@@ -46,7 +46,7 @@ export function HomeHero({ slides, ctaHref }: { slides?: Slide[]; ctaHref?: stri
         {/* CTA */}
         <div className="mt-8">
           <a href={ctaHref || '#featured'} className="inline-flex items-center rounded-lg px-5 py-2.5 backdrop-blur-md bg-white/15 ring-1 ring-white/30 text-white hover:bg-white/25">
-            Get Started
+            {t('home.get_started')}
           </a>
         </div>
 

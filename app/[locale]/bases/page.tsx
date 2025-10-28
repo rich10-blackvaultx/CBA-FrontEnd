@@ -26,16 +26,7 @@ export default function BasesPage() {
   const pageCount = Math.max(1, Math.ceil(list.length / PAGINATION.pageSize))
   return (
     <div className="container-responsive py-6 space-y-4">
-      {/* Module intro */}
-      <div className="card p-4">
-        <h2 className="text-xl font-semibold">{t('modules.node.title')}</h2>
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{t('modules.node.goal')}</p>
-        <ul className="mt-3 text-sm list-disc pl-5 space-y-1">
-          <li>{t('modules.node.features.network')}</li>
-          <li>{t('modules.node.features.services')}</li>
-          <li>{t('modules.node.features.matching')}</li>
-        </ul>
-      </div>
+      {/* Module intro hidden per request */}
 
       <h1 className="text-2xl font-semibold">{t('nav.bases')}</h1>
       <BasesMap bases={list} />
