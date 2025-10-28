@@ -1,7 +1,7 @@
 {
   "modules": {
     "node": {
-      "title": "Node —— 全球工作与生活枢纽",
+      "title": "基地",
       "goal": "为数字游民提供安全、便捷、可持续的办公与居住空间。",
       "features": {
         "network": "全球基地网络，支持跨国共享办公与联合居住（长期/短期）预订",
@@ -10,7 +10,7 @@
       }
     },
     "work": {
-      "title": "Work —— 分布式生产力平台",
+      "title": "工作",
       "goal": "让数字游民在全球范围内高效工作、协作与创造价值。",
       "features": {
         "collab": "远程协作与任务管理：项目发布、任务分配、进度跟踪，并集成 Slack/Notion/Figma/GitHub",
@@ -19,7 +19,7 @@
       }
     },
     "community": {
-      "title": "Community —— 社交与共创生态",
+      "title": "社区",
       "goal": "构建全球数字游民的互助、学习与协作网络。",
       "features": {
         "groups": "基于职业、技能、兴趣或城市的社群，包含论坛、问答与知识分享",
@@ -92,7 +92,7 @@
     "cta": { "joinTitle": "加入", "joinButton": "加入社区", "connectFirst": "请先连接钱包" }
   },
   "workUI": {
-    "title": "Work —— 分布式生产力",
+    "title": "Work",
     "projects": { "title": "项目", "create": "创建项目", "create_prompt": "输入项目标题", "status": "状态" },
     "tasks": { "title": "任务", "add": "添加", "add_placeholder": "新任务...", "complete": "完成", "reopen": "重新打开" },
     "match": { "title": "项目与机会匹配", "skills": "技能", "interests": "兴趣", "timezone": "时区", "add_to_my_work": "加入到我的工作", "clear": "清空选择" },
@@ -112,6 +112,6 @@
     "actions": { "save": "保存草稿", "publish": "立即发布", "connectFirst": "请先连接钱包" },
     "review": "发布前预览",
     "success": "发布成功"
-  }
+  },
+  "me": { "my_community": "我的社区", "create_activity": "创建活动" }
 }
-

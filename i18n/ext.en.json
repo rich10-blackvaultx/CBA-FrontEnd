@@ -14,7 +14,7 @@
   "common": { "notImplemented": "Work in progress" },
   "modules": {
     "node": {
-      "title": "Node — Global Work & Life Hub",
+      "title": "Node",
       "goal": "Provide safe, convenient, and sustainable work-living spaces for digital nomads.",
       "features": {
         "network": "Global node network with cross-border coliving and cowork booking (short/long term)",
@@ -23,7 +23,7 @@
       }
     },
     "work": {
-      "title": "Work — Distributed Productivity Platform",
+      "title": "Work",
       "goal": "Help digital nomads collaborate globally and create value efficiently.",
       "features": {
         "collab": "Remote collaboration and task management: project posting, task assignment, progress tracking; integrations with Slack/Notion/Figma/GitHub",
@@ -32,7 +32,7 @@
       }
     },
     "community": {
-      "title": "Community — Social & Co-creation Ecosystem",
+      "title": "Community",
       "goal": "Build a global network for mutual support, learning, and collaboration.",
       "features": {
         "groups": "Interest and professional groups by role, skill, or city with forums, Q&A, and knowledge sharing",
@@ -125,5 +125,6 @@
     "actions": { "save": "Save draft", "publish": "Publish now", "connectFirst": "Please connect wallet" },
     "review": "Review",
     "success": "Published"
-  }
+  },
+  "me": { "my_community": "My Community", "create_activity": "Create Activity" }
 }

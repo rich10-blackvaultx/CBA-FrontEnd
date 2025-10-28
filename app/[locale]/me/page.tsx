@@ -4,12 +4,15 @@ import { ProfileForm } from '@/components/forms/ProfileForm'
 import { useUIStore } from '@/stores/useUIStore'
 import { useFavoritesStore } from '@/stores/useFavoritesStore'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { useI18n } from '@/hooks/useI18n'
 
 export default function MePage() {
   const openNI = useUIStore((s) => s.openNI)
   const favBases = Object.keys(useFavoritesStore((s) => s.bases))
   const favNodes = Object.keys(useFavoritesStore((s) => s.nodes))
   const [bids, setBids] = useState<any[]>([])
+  const { t } = useI18n('me')
   useEffect(() => {
     ;(async () => {
       try {
@@ -31,6 +34,14 @@ export default function MePage() {
         ))}
       </div>
       <div className="grid md:grid-cols-3 gap-4">
+        <div className="card p-4">
+          <h3 className="font-semibold mb-2">{t('my_community') || 'My Community'}</h3>
+          <div className="flex items-center gap-2">
+            <Link href="./create/activity" className="px-3 py-2 rounded-md border text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+              {t('create_activity') || 'Create Activity'}
+            </Link>
+          </div>
+        </div>
         <div className="card p-4">
           <h3 className="font-semibold mb-2">我的收藏</h3>
           <div className="text-sm">Bases: {favBases.length} · Nodes: {favNodes.length}</div>
