@@ -7,7 +7,7 @@
     "groups": "群组",
     "oss": "开源",
     "me": "我的",
-    "pages": "页面",
+    "pages": "主页",
     "contact": "联系"
   },
   "jobs": {
@@ -29,6 +29,8 @@
   "actions": {
     "connect_wallet": "连接钱包",
     "disconnect": "断开连接",
+    "login": "登录",
+    "logout": "退出登录",
     "switch_network": "切换网络",
     "learn_more": "了解更多",
     "apply": "申请",

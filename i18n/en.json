@@ -22,6 +22,8 @@
   "actions": {
     "connect_wallet": "Connect Wallet",
     "disconnect": "Disconnect",
+    "login": "Login",
+    "logout": "Logout",
     "switch_network": "Switch Network",
     "learn_more": "Learn more",
     "apply": "Apply",

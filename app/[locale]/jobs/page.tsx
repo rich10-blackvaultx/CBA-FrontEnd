@@ -144,7 +144,7 @@ export default function JobsPage() {
                       {selected.payType} · {selected.timezone}
                     </div>
                   </div>
-                  <button className="px-3 py-1.5 rounded-md bg-fuchsia-600 text-white text-sm" onClick={() => setApplyOpen(true)}>
+                  <button className="px-3 py-1.5 rounded-md bg-brand text-white text-sm" onClick={() => setApplyOpen(true)}>
                     {(t('actions.apply') as any) || 'Apply'}
                   </button>
                 </div>
@@ -210,7 +210,7 @@ export default function JobsPage() {
             </label>
           </div>
           <div className="pt-2 flex justify-end">
-            <button type="submit" className="px-4 py-2 rounded-md bg-fuchsia-600 text-white">
+            <button type="submit" className="px-4 py-2 rounded-md bg-brand text-white">
               {(t('actions.submit') as any) || 'Submit'}
             </button>
           </div>

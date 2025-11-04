@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useI18n } from '@/hooks/useI18n'
 import { LanguageSwitch } from './LanguageSwitch'
 import { WalletButtonCustom } from './WalletButtonCustom'
+import { LoginButton } from './LoginButton'
 import { ThemeToggle } from './ThemeToggle'
 import { useUIStore } from '@/stores/useUIStore'
 
@@ -44,6 +45,7 @@ export function NavbarIntl() {
           {/* removed search box per request */}
           <ThemeToggle variant={onHome ? 'ghost' : 'default'} />
           <LanguageSwitch variant={onHome ? 'ghost' : 'default'} />
+          <LoginButton variant={onHome ? 'ghost' : 'default'} />
           <WalletButtonCustom variant={onHome ? 'ghost' : 'default'} />
         </div>
       </div>

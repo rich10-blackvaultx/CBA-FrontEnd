@@ -113,7 +113,8 @@ html.theme-animating::before {
 @keyframes menuPop { from { opacity: 0; transform: translateY(6px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
 /* Overrides: dark mode neutral buttons/steps */
-.dark .bg-brand { background: linear-gradient(180deg, #4b5563 0%, #374151 100%) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 1px 10px rgba(0,0,0,0.25) !important; }
-.dark .btn-primary { background: linear-gradient(180deg, #4b5563 0%, #374151 100%); box-shadow: 0 8px 24px rgba(55,65,81,.35); }
-.dark .btn-primary:hover { box-shadow: 0 12px 28px rgba(55,65,81,.45); }
+/* Dark mode: unify primary buttons to purple */
+.dark .bg-brand { background: linear-gradient(180deg, #a21caf 0%, #86198f 100%) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 8px 24px rgba(134,25,143,.35) !important; }
+.dark .btn-primary { background: linear-gradient(180deg, #a21caf 0%, #86198f 100%); box-shadow: 0 8px 24px rgba(134,25,143,.35); }
+.dark .btn-primary:hover { box-shadow: 0 12px 28px rgba(134,25,143,.45); }
 .dark .step-chip-current { background: linear-gradient(180deg, #4b5563 0%, #374151 100%); color: #fff; border: 0; }
