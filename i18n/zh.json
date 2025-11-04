@@ -10,6 +10,13 @@
     "pages": "页面",
     "contact": "联系"
   },
+  "jobs": {
+    "filters": { "skills": "技能", "budget": "预算", "timezone": "时区", "payType": "结算方式" },
+    "search_placeholder": "标签、地点、公司",
+    "remote": "远程",
+    "cta": { "connect": "连接钱包后竞标", "bid": "提交竞标" },
+    "applyForm": { "name": "姓名", "email": "邮箱", "portfolio": "作品/主页", "message": "自我介绍", "ok": "申请已提交" }
+  },
   "home": {
     "hero_title": "Glomia",
     "hero_sub": "探索全球的基地、节点与故事",

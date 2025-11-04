@@ -3,7 +3,7 @@
     "bases": "Nodes",
     "nodes": "Nodes",
     "community": "Community",
-    "jobs": "Work",
+    "jobs": "Jobs",
     "groups": "Groups",
     "oss": "Open-source",
     "me": "Me",
@@ -44,7 +44,10 @@
   },
   "jobs": {
     "filters": { "skills": "Skills", "budget": "Budget", "timezone": "Timezone", "payType": "Pay type" },
-    "cta": { "connect": "Connect wallet to bid", "bid": "Submit bid" }
+    "search_placeholder": "Tag, Location, Company",
+    "remote": "Remote",
+    "cta": { "connect": "Connect wallet to bid", "bid": "Submit bid" },
+    "applyForm": { "name": "Name", "email": "Email", "portfolio": "Portfolio", "message": "Message", "ok": "Application submitted" }
   },
   "common": { "notImplemented": "Work in progress" },
   "filters": {
@@ -78,5 +81,3 @@
     "step_poster": "Poster"
   }
 }
-
-

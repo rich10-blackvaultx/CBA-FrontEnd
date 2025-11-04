@@ -23,7 +23,7 @@ export function NavbarIntl() {
             <button className="px-3 py-2 rounded-md text-gray-800 dark:text-gray-200 group-hover:text-brand">{t('nav.pages')}</button>
             <div className="absolute left-0 mt-1 hidden group-hover:block card p-2 min-w-44 menu-pop z-50">
               <Link href={`${base}/bases`} className="block px-3 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">{t('nav.bases')}</Link>
-              <Link href={`${base}/work`} className="block px-3 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">{t('nav.jobs')}</Link>
+              <Link href={`${base}/jobs`} className="block px-3 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">{t('nav.jobs')}</Link>
               <Link href={`${base}/community`} className="block px-3 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">{t('nav.community')}</Link>
               <Link href={`${base}/me`} className="block px-3 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">{t('nav.me')}</Link>
             </div>

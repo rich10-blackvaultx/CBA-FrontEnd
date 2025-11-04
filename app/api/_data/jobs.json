@@ -17,6 +17,77 @@
     "payType": "hourly",
     "timezone": "UTC+8",
     "owner": { "name": "Bob" }
+  },
+  {
+    "id": "job-3",
+    "title": "Solidity smart contract audit",
+    "skills": ["Solidity", "Hardhat", "Security"],
+    "budget": { "min": 5000, "max": 8000, "currency": "USD" },
+    "payType": "fixed",
+    "timezone": "UTC+0",
+    "owner": { "name": "ChainSafe" }
+  },
+  {
+    "id": "job-4",
+    "title": "Next.js ecommerce MVP",
+    "skills": ["NextJS", "React", "Tailwind", "Prisma"],
+    "budget": { "min": 3000, "max": 6000, "currency": "USD" },
+    "payType": "milestone",
+    "timezone": "UTC-5",
+    "owner": { "name": "Acme" }
+  },
+  {
+    "id": "job-5",
+    "title": "Mobile app UI polish",
+    "skills": ["Design", "Figma", "Prototyping"],
+    "budget": { "min": 25, "max": 45, "currency": "USD" },
+    "payType": "hourly",
+    "timezone": "UTC+3",
+    "owner": { "name": "Studio X" }
+  },
+  {
+    "id": "job-6",
+    "title": "Rust backend microservice",
+    "skills": ["Rust", "gRPC", "PostgreSQL"],
+    "budget": { "min": 4000, "max": 9000, "currency": "USD" },
+    "payType": "milestone",
+    "timezone": "UTC+2",
+    "owner": { "name": "Infra Co" }
+  },
+  {
+    "id": "job-7",
+    "title": "AI inference pipeline",
+    "skills": ["Python", "PyTorch", "MLOps"],
+    "budget": { "min": 60, "max": 100, "currency": "USD" },
+    "payType": "hourly",
+    "timezone": "UTC+5:30",
+    "owner": { "name": "ML Lab" }
+  },
+  {
+    "id": "job-8",
+    "title": "Community manager (Discord)",
+    "skills": ["Discord", "Community", "Content"],
+    "budget": { "min": 1500, "max": 2500, "currency": "USD" },
+    "payType": "fixed",
+    "timezone": "UTC-3",
+    "owner": { "name": "DAO XYZ" }
+  },
+  {
+    "id": "job-9",
+    "title": "Golang API for payments",
+    "skills": ["Go", "REST", "Docker"],
+    "budget": { "min": 3500, "max": 7000, "currency": "USD" },
+    "payType": "milestone",
+    "timezone": "UTC-8",
+    "owner": { "name": "FinPay" }
+  },
+  {
+    "id": "job-10",
+    "title": "Frontend performance tuning",
+    "skills": ["React", "Vite", "Web Vitals"],
+    "budget": { "min": 2000, "max": 4000, "currency": "USD" },
+    "payType": "fixed",
+    "timezone": "UTC+9",
+    "owner": { "name": "Speedy" }
   }
 ]
-
