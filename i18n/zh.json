@@ -43,6 +43,7 @@
     "submit_api": "通过 API 提交",
     "not_implemented": "暂未开放"
   },
+  "common": { "notImplemented": "暂未开放" },
   "filters": {
     "budget": "预算/月",
     "internet": "网络",

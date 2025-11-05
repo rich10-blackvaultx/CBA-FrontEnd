@@ -13,7 +13,8 @@ async function getHomeData() {
     fetch(postsUrl, { next: { revalidate: 60 } })
   ])
   const [bases, nodes, posts] = await Promise.all([basesRes.json(), nodesRes.json(), postsRes.json()])
-  return { bases: bases.slice(0, 8), nodes: nodes.slice(0, 8), posts: posts.slice(0, 8) }
+  console.log('Home Data:', { bases, nodes, posts })
+  return { bases: bases?.data?.items.slice(0, 8), nodes: nodes?.slice(0, 8), posts: posts?.slice(0, 8) }
 }
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {

@@ -13,6 +13,17 @@ const nextConfig = {
       }
     }
   },
+  // Proxy /api/bases to external API domain
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/api/bases/:path*',
+          destination: 'https://api.glomia.life/api/bases/:path*'
+        }
+      ]
+    }
+  },
   // Allow cross-origin dev access if needed (optional; adjust as necessary)
   // allowedDevOrigins: ["http://localhost:3000"],
   webpack: (config) => {

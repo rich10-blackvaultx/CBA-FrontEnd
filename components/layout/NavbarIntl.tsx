@@ -17,9 +17,9 @@ export function NavbarIntl() {
   const onHome = pathname === base || pathname === `${base}/`
   return (
     <header className={`${onHome ? 'absolute' : 'sticky'} top-0 z-30 w-full ${onHome ? 'bg-transparent' : 'bg-white/80 dark:bg-gray-900/70 backdrop-blur border-b dark:border-gray-800'}`}>
-      <div className="container-responsive h-16 grid grid-cols-3 items-center">
+      <div className="container-responsive h-16 relative flex items-center justify-between">
         {/* Left menus (all under Pages) */}
-        <nav className="hidden md:flex items-center gap-2">
+        <nav className="hidden md:flex items-center gap-2 shrink-0">
           <div className="relative group">
             <button className="px-3 py-2 rounded-md text-gray-800 dark:text-gray-200 group-hover:text-brand">{t('nav.pages')}</button>
             <div className="absolute left-0 mt-1 hidden group-hover:block card p-2 min-w-44 menu-pop z-50">
@@ -31,16 +31,16 @@ export function NavbarIntl() {
           </div>
         </nav>
 
-        {/* Center brand */}
-        <div className="flex items-center justify-center">
-          <Link href={base} className="font-semibold text-xl flex items-center gap-2">
+        {/* Center brand (absolute center to avoid squeeze) */}
+        <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
+          <Link href={base} className="font-semibold text-xl flex items-center gap-2 pointer-events-auto">
             <span className="text-brand">📍</span>
             <span className="tracking-wide">TIP</span>
           </Link>
         </div>
 
         {/* Right controls */}
-        <div className={`hidden md:flex items-center justify-end gap-2 ${onHome ? 'text-white' : ''}`}>
+        <div className={`hidden md:flex items-center justify-end gap-2 flex-nowrap shrink-0 ${onHome ? 'text-white' : ''}`}>
           <button onClick={() => openNI('Contact')} className={`${onHome ? 'text-white/90 hover:text-white' : 'text-gray-800 dark:text-gray-200 hover:text-brand'} h-9 px-3 rounded-md text-sm`}>{t('nav.contact')}</button>
           {/* removed search box per request */}
           <ThemeToggle variant={onHome ? 'ghost' : 'default'} />
