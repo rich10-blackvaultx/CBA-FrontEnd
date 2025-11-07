@@ -50,18 +50,20 @@ export default function LoginPage() {
   }
 
   async function startOAuth(provider: 'google' | 'github' | 'ocid') {
-    const r = await fetch(`/api/auth/oauth/${provider}/create`)
+    const r = await fetch(`/api/oauth/authorize?provider=${provider}`)
+    console.log(r)
     const d = await r.json()
-    if (d.authorizeUrl) window.open(d.authorizeUrl, '_blank', 'width=480,height=640')
-    const timer = setInterval(async () => {
-      const s = await fetch(`/api/auth/oauth/${provider}/status?state=${d.state}`).then((x) => x.json())
-      if (s.status === 'done') {
-        setProfile(s.profile)
-        clearInterval(timer)
-        show('登录成功', 'success')
-        router.push(`/${locale}`)
-      }
-    }, 2000)
+    console.log(d)
+    if (d?.data?.authorize_url) window.open(d.data?.authorize_url, '_blank', 'width=480,height=640')
+    // const timer = setInterval(async () => {
+    //   const s = await fetch(`/api/auth/oauth/${provider}/status?state=${d.state}`).then((x) => x.json())
+    //   if (s.status === 'done') {
+    //     setProfile(s.profile)
+    //     clearInterval(timer)
+    //     show('登录成功', 'success')
+    //     router.push(`/${locale}`)
+    //   }
+    // }, 2000)
   }
 
   async function walletLogin() {
