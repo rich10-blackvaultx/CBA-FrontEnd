@@ -17,10 +17,11 @@ const nextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
-        {
-          source: '/api/bases/:path*',
-          destination: 'https://api.glomia.life/api/bases/:path*'
-        }
+        // {
+        //   source: '/api/bases/:path*',
+        //   destination: 'https://api.glomia.life/api/bases/:path*'
+        // },
+        { source: '/api/:path*', destination: 'https://api.glomia.life/api/:path*' }
       ]
     }
   },

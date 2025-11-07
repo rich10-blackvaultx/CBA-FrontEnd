@@ -1,0 +1,26 @@
+[
+  {
+    "id": "884155bf-082f-4114-8766-217e36836a63",
+    "email": "xyl13129752627@163.com",
+    "password": {
+      "salt": "1709833894ec9ec7bc6b507e35b93d2a",
+      "hash": "ca312e4e019e10305b66e1f7f4d37eea172cc0a76fc184a3be4cf27eb51f6affd9afefe4ff3252afadc367517b8edf160dcd1b1ff6b0be03c7735a491a89651f"
+    },
+    "nickname": "小徐",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=%E5%B0%8F%E5%BE%90",
+    "provider": "email",
+    "createdAt": "2025-11-06T07:04:07.911Z"
+  },
+  {
+    "id": "a55f70c6-bb1a-4722-ad75-3792995fcadf",
+    "email": "xyl13129752622@163.com",
+    "password": {
+      "salt": "f8799caf4ed026f0e73ec3054678ef85",
+      "hash": "82777f623410f59cf0272f30a35767d73d3d0aff21c4e4cb2ffc7e261fa93c50d52476234ac6c7f48249cf8adc805c57ab32ad5728168ee10be0498ba19c29dc"
+    },
+    "nickname": "小徐",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=%E5%B0%8F%E5%BE%90",
+    "provider": "email",
+    "createdAt": "2025-11-06T07:04:37.250Z"
+  }
+]

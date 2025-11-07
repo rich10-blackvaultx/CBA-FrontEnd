@@ -13,13 +13,14 @@ export interface BaseSummary {
   slug: string
   name: string
   country: string
-  coverUrl: string
+  cover_image_url: string
   monthlyCost: number
   internetMbps: number
   visaLevel: 1 | 2 | 3 | 4 | 5
   climate: Climate
   safety: number
   communityScore: number
+  address: string
 }
 
 export interface TimelineItem { day: number; title: string; desc: string; verify?: string[] }

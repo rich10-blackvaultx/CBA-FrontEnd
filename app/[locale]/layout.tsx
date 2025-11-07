@@ -6,6 +6,7 @@ import { Web3Provider } from '@/components/providers/Web3Provider'
 import { QueryProvider } from '@/components/providers/QueryProvider'
 import { NIOverlay } from '@/components/shared/NIOverlay'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
+import { ToastProvider } from '@/components/providers/ToastProvider'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -38,15 +39,17 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <ThemeProvider>
-        {/* React Query must wrap RainbowKitProvider */}
-        <QueryProvider>
-          <Web3Provider>
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
-            <NIOverlay />
-          </Web3Provider>
-        </QueryProvider>
+        <ToastProvider>
+          {/* React Query must wrap RainbowKitProvider */}
+          <QueryProvider>
+            <Web3Provider>
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+              <NIOverlay />
+            </Web3Provider>
+          </QueryProvider>
+        </ToastProvider>
       </ThemeProvider>
     </NextIntlClientProvider>
   )

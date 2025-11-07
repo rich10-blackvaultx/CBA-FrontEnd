@@ -3,8 +3,9 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
+type Provider = 'wechat' | 'google' | 'github' | 'email' | 'metamask' | 'ocid'
 type AuthState = {
-  profile: { nickname?: string; avatar?: string; provider?: 'wechat' | 'google' | 'github' } | null
+  profile: { username?: string; avatar?: string; provider?: Provider; email?: string; address?: string, token?:string } | null
   setProfile: (p: AuthState['profile']) => void
 }
 

@@ -4,11 +4,11 @@ import path from 'node:path'
 
 const file = path.join(process.cwd(), 'app', 'api', '_data', 'bases.json')
 
-export async function GET(_: Request, ctx: { params: { slug: string } }) {
+export async function GET(_: Request, ctx: any) {
   const buf = await fs.readFile(file, 'utf-8')
   const list = JSON.parse(buf)
-  const found = list.find((b: any) => b.slug === ctx.params.slug)
+  const params = (await ctx?.params) || ({} as any)
+  const found = list.find((b: any) => b.slug === params.slug)
   if (!found) return NextResponse.json({ error: 'Not found' }, { status: 404 })
   return NextResponse.json(found)
 }
-

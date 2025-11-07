@@ -26,7 +26,7 @@ export function BaseCard({
       href={href}
       className={`relative overflow-hidden rounded-[24px] ${size} shrink-0 snap-start bg-gray-200 group transform-gpu transition-transform duration-300 ease-out`}
     >
-      <img src={base.coverUrl} alt={base.name} className="absolute inset-0 w-full h-full object-cover" />
+      <img src={base.cover_image_url} alt={base.name} className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
       <button
@@ -47,12 +47,12 @@ export function BaseCard({
       <div className="absolute bottom-0 left-0 right-0 p-5 text-white drop-shadow">
         <div className="mb-2">
           <h3 className="text-xl font-semibold leading-tight">{base.name}</h3>
-          <p className="text-sm opacity-90 -mt-0.5">{base.country}</p>
+          <p className="text-sm opacity-90 -mt-0.5">{base.address}</p>
         </div>
-
+{/* 
         <p className="text-[13px] opacity-90">
           Budget ${base.monthlyCost}/m • Net {base.internetMbps} Mbps
-        </p>
+        </p> */}
 
         {/* <div className="mt-4">
           <span className="inline-block rounded-full bg-brand px-5 py-2 text-sm text-white shadow-soft">

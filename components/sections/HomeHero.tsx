@@ -20,6 +20,8 @@ export function HomeHero({ slides, ctaHref }: { slides?: Slide[]; ctaHref?: stri
     return () => clearInterval(timer)
   }, [items.length])
 
+  console.log('HomeHero items:', items)
+
   return (
     <section className="relative h-screen min-h-[640px] w-full overflow-hidden rounded-none">
       {/* Slides */}

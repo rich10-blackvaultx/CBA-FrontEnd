@@ -16,16 +16,14 @@ export default function BasesPage() {
   const [filter, setFilter] = useState<FilterValue>({})
   const [page, setPage] = useState(1)
   const q = JSON.stringify(filter)
-  const { data=[]} = useQuery({
+  const {data} = useQuery({
     queryKey: ['bases', q],
     queryFn: () => fetchBases(q),
-    select:(res:any) => res.data?.items ?? []
   })
-
-  const list = data
+  const list = data || []
   const start = (page - 1) * PAGINATION.pageSize
   const end = start + PAGINATION.pageSize
-  const pageCount = Math.max(1, Math.ceil(list.length / PAGINATION.pageSize))
+  const pageCount = Math.max(1, Math.ceil(list?.length / PAGINATION.pageSize))
 
   return (
     <div className="container-responsive py-6 space-y-4">
@@ -33,10 +31,10 @@ export default function BasesPage() {
 
       <h1 className="text-2xl font-semibold">{t('nav.bases')}</h1>
       <BasesMap bases={list || []} />
-      <FilterBar onChange={(v) => { setPage(1); setFilter(v) }} />
+      {/* <FilterBar onChange={(v) => { setPage(1); setFilter(v) }} /> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {list?.slice(start, end).map((b: any) => (
-          <BaseCard key={b.id} base={b} href={`/${locale}/bases/${b.slug}`} ctaLabel="More" />
+          <BaseCard key={b.id} base={b} href={`/${locale}/bases/${b.id}`} ctaLabel="More" />
         ))}
       </div>
       <div className="flex justify-center items-center gap-2 mt-4">

@@ -80,11 +80,11 @@ export default async function BaseDetailPage({ params }: { params: Promise<{ loc
             <BaseActions baseId={detail.id} baseName={detail.name} />
             <div>
               <h4 className="font-semibold mb-2">Recommended Nodes</h4>
-              <div className="grid grid-cols-1 gap-3">
+              {/* <div className="grid grid-cols-1 gap-3">
                 {detail.nodes.slice(0, 3).map((n) => (
                   <NodeAbilityCard key={n.id} node={n} href={`${base}/nodes/${n.id}`} />
                 ))}
-              </div>
+              </div> */}
             </div>
           </aside>
         </div>
